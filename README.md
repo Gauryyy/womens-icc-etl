@@ -111,11 +111,11 @@ Refer to `analytics/analysis.py` for details.
 
 ### Build the Docker Image
 
-    docker build -t cricsheet-etl .
+    docker build -t womens-icc-etl .
 
 ### Run the Pipeline
 
-    docker run --rm -v $(pwd)/data:/app/data cricsheet-etl
+    docker run -p 5000:5000 womens-icc-etl
 
 ***
 
