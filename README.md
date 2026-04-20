@@ -37,7 +37,7 @@ The pipeline ingests raw JSON match files, transforms deeply nested cricket data
     │   └── main.py
     │
     ├── analytics/
-    │   └── analysis.ipynb
+    │   └── analysis.py
     │
     ├── logs/
     │   └── etl.log
