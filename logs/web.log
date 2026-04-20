@@ -1,0 +1,26 @@
+2026-04-20 20:02:26,518 -  * Debugger is active!
+2026-04-20 20:02:26,520 -  * Debugger PIN: 109-825-318
+2026-04-20 20:02:31,807 -  * Detected change in 'C:\\Work\\Python Project (Hetansh)\\womens-icc-etl\\web\\app.py', reloading
+2026-04-20 20:02:33,744 -  * Debugger is active!
+2026-04-20 20:02:33,753 -  * Debugger PIN: 109-825-318
+2026-04-20 20:02:41,203 -  * Detected change in 'C:\\Work\\Python Project (Hetansh)\\womens-icc-etl\\web\\app.py', reloading
+2026-04-20 20:02:42,596 -  * Debugger is active!
+2026-04-20 20:02:42,598 -  * Debugger PIN: 109-825-318
+2026-04-20 20:02:53,052 -  * Detected change in 'C:\\Work\\Python Project (Hetansh)\\womens-icc-etl\\web\\app.py', reloading
+2026-04-20 20:02:54,408 -  * Debugger is active!
+2026-04-20 20:02:54,416 -  * Debugger PIN: 109-825-318
+2026-04-20 20:03:40,450 -  * Detected change in 'C:\\Work\\Python Project (Hetansh)\\womens-icc-etl\\web\\app.py', reloading
+2026-04-20 20:03:42,384 -  * Debugger is active!
+2026-04-20 20:03:42,387 -  * Debugger PIN: 109-825-318
+2026-04-20 20:04:26,656 - Home page accessed
+2026-04-20 20:04:26,664 - 127.0.0.1 - - [20/Apr/2026 20:04:26] "GET / HTTP/1.1" 200 -
+2026-04-20 20:04:26,950 - 127.0.0.1 - - [20/Apr/2026 20:04:26] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2026-04-20 20:04:26,954 - 127.0.0.1 - - [20/Apr/2026 20:04:26] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2026-04-20 20:04:26,983 - Players list requested
+2026-04-20 20:04:26,991 - Teams list requested
+2026-04-20 20:04:26,996 - 127.0.0.1 - - [20/Apr/2026 20:04:26] "GET /api/teams HTTP/1.1" 200 -
+2026-04-20 20:04:26,997 - 127.0.0.1 - - [20/Apr/2026 20:04:26] "GET /api/players HTTP/1.1" 200 -
+2026-04-20 20:04:43,286 - Player stats requested: MDN Hansika vs all
+2026-04-20 20:04:43,297 - 127.0.0.1 - - [20/Apr/2026 20:04:43] "GET /api/player_stats/MDN%20Hansika HTTP/1.1" 200 -
+2026-04-20 20:04:52,178 - Team vs team stats requested: Sri Lanka vs Pakistan
+2026-04-20 20:04:52,217 - 127.0.0.1 - - [20/Apr/2026 20:04:52] "GET /api/team_vs_team/Sri%20Lanka/Pakistan HTTP/1.1" 200 -

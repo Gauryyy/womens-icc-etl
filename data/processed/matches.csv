@@ -1,0 +1,103 @@
+match_id,date,team1,team2,venue,city,winner
+1085945,2017-06-24,New Zealand,Sri Lanka,County Ground,Bristol,New Zealand
+1085946,2017-06-24,England,India,County Ground,Derby,India
+1085947,2017-06-25,Pakistan,South Africa,Grace Road,Leicester,South Africa
+1085948,2017-06-26,Australia,West Indies,County Ground,Taunton,Australia
+1085949,2017-06-27,England,Pakistan,Grace Road,Leicester,England
+1085951,2017-06-29,India,West Indies,County Ground,Taunton,India
+1085952,2017-06-29,Australia,Sri Lanka,County Ground,Bristol,Australia
+1085953,2017-07-02,England,Sri Lanka,County Ground,Taunton,England
+1085954,2017-07-02,Australia,New Zealand,County Ground,Bristol,Australia
+1085955,2017-07-02,India,Pakistan,County Ground,Derby,India
+1085956,2017-07-02,South Africa,West Indies,Grace Road,Leicester,South Africa
+1085957,2017-07-05,England,South Africa,County Ground,Bristol,England
+1085958,2017-07-05,India,Sri Lanka,County Ground,Derby,India
+1085959,2017-07-05,Australia,Pakistan,Grace Road,Leicester,Australia
+1085960,2017-07-06,New Zealand,West Indies,County Ground,Taunton,New Zealand
+1085961,2017-07-08,New Zealand,Pakistan,County Ground,Taunton,New Zealand
+1085962,2017-07-08,India,South Africa,Grace Road,Leicester,South Africa
+1085963,2017-07-09,England,Australia,County Ground,Bristol,England
+1085964,2017-07-09,Sri Lanka,West Indies,County Ground,Derby,West Indies
+1085965,2017-07-11,Pakistan,West Indies,Grace Road,Leicester,West Indies
+1085966,2017-07-12,South Africa,Sri Lanka,County Ground,Taunton,South Africa
+1085967,2017-07-12,Australia,India,County Ground,Bristol,Australia
+1085968,2017-07-12,England,New Zealand,County Ground,Derby,England
+1085969,2017-07-15,Australia,South Africa,County Ground,Taunton,Australia
+1085970,2017-07-15,England,West Indies,County Ground,Bristol,England
+1085971,2017-07-15,India,New Zealand,County Ground,Derby,India
+1085972,2017-07-15,Pakistan,Sri Lanka,Grace Road,Leicester,Sri Lanka
+1085973,2017-07-18,South Africa,England,County Ground,Bristol,England
+1085974,2017-07-20,India,Australia,County Ground,Derby,India
+1085975,2017-07-23,England,India,Lord's,London,England
+1243908,2022-03-04,West Indies,New Zealand,"Bay Oval, Mount Maunganui",Mount Maunganui,West Indies
+1243909,2022-03-05,South Africa,Bangladesh,"University Oval, Dunedin",Dunedin,South Africa
+1243910,2022-03-05,Australia,England,"Seddon Park, Hamilton",Hamilton,Australia
+1243911,2022-03-06,India,Pakistan,"Bay Oval, Mount Maunganui",Mount Maunganui,India
+1243912,2022-03-07,Bangladesh,New Zealand,"University Oval, Dunedin",Dunedin,New Zealand
+1243913,2022-03-08,Pakistan,Australia,"Bay Oval, Mount Maunganui",Mount Maunganui,Australia
+1243914,2022-03-09,West Indies,England,"University Oval, Dunedin",Dunedin,West Indies
+1243915,2022-03-10,New Zealand,India,"Seddon Park, Hamilton",Hamilton,New Zealand
+1243916,2022-03-11,South Africa,Pakistan,"Bay Oval, Mount Maunganui",Mount Maunganui,South Africa
+1243917,2022-03-12,India,West Indies,"Seddon Park, Hamilton",Hamilton,India
+1243918,2022-03-13,Australia,New Zealand,"Basin Reserve, Wellington",Wellington,Australia
+1243919,2022-03-14,England,South Africa,"Bay Oval, Mount Maunganui",Mount Maunganui,South Africa
+1243920,2022-03-14,Bangladesh,Pakistan,"Seddon Park, Hamilton",Hamilton,Bangladesh
+1243921,2022-03-15,West Indies,Australia,"Basin Reserve, Wellington",Wellington,Australia
+1243922,2022-03-16,India,England,"Bay Oval, Mount Maunganui",Mount Maunganui,England
+1243923,2022-03-17,New Zealand,South Africa,"Seddon Park, Hamilton",Hamilton,South Africa
+1243924,2022-03-18,West Indies,Bangladesh,"Bay Oval, Mount Maunganui",Mount Maunganui,West Indies
+1243925,2022-03-19,India,Australia,"Eden Park, Auckland",Auckland,Australia
+1243926,2022-03-20,New Zealand,England,"Eden Park, Auckland",Auckland,England
+1243927,2022-03-21,West Indies,Pakistan,"Seddon Park, Hamilton",Hamilton,Pakistan
+1243928,2022-03-22,South Africa,Australia,"Basin Reserve, Wellington",Wellington,Australia
+1243929,2022-03-22,India,Bangladesh,"Seddon Park, Hamilton",Hamilton,India
+1243930,2022-03-24,South Africa,West Indies,"Basin Reserve, Wellington",Wellington,
+1243931,2022-03-24,Pakistan,England,"Hagley Oval, Christchurch",Christchurch,England
+1243932,2022-03-25,Bangladesh,Australia,"Basin Reserve, Wellington",Wellington,Australia
+1243933,2022-03-26,New Zealand,Pakistan,"Hagley Oval, Christchurch",Christchurch,New Zealand
+1243934,2022-03-27,England,Bangladesh,"Basin Reserve, Wellington",Wellington,England
+1243935,2022-03-27,India,South Africa,"Hagley Oval, Christchurch",Christchurch,South Africa
+1243936,2022-03-30,Australia,West Indies,"Basin Reserve, Wellington",Wellington,Australia
+1243937,2022-03-31,England,South Africa,"Hagley Oval, Christchurch",Christchurch,England
+1243938,2022-04-03,Australia,England,"Hagley Oval, Christchurch",Christchurch,Australia
+1490413,2025-09-30,India,Sri Lanka,"Barsapara Cricket Stadium, Guwahati",Guwahati,India
+1490414,2025-10-01,Australia,New Zealand,"Holkar Cricket Stadium, Indore",Indore,Australia
+1490415,2025-10-02,Pakistan,Bangladesh,"R Premadasa Stadium, Colombo",Colombo,Bangladesh
+1490416,2025-10-03,South Africa,England,"Barsapara Cricket Stadium, Guwahati",Guwahati,England
+1490418,2025-10-05,India,Pakistan,"R Premadasa Stadium, Colombo",Colombo,India
+1490419,2025-10-06,New Zealand,South Africa,"Holkar Cricket Stadium, Indore",Indore,South Africa
+1490420,2025-10-07,Bangladesh,England,"Barsapara Cricket Stadium, Guwahati",Guwahati,England
+1490421,2025-10-08,Australia,Pakistan,"R Premadasa Stadium, Colombo",Colombo,Australia
+1490422,2025-10-09,India,South Africa,"Dr. Y.S. Rajasekhara Reddy ACA-VDCA Cricket Stadium, Visakhapatnam",Visakhapatnam,South Africa
+1490423,2025-10-10,New Zealand,Bangladesh,"Barsapara Cricket Stadium, Guwahati",Guwahati,New Zealand
+1490424,2025-10-11,England,Sri Lanka,"R Premadasa Stadium, Colombo",Colombo,England
+1490425,2025-10-12,India,Australia,"Dr. Y.S. Rajasekhara Reddy ACA-VDCA Cricket Stadium, Visakhapatnam",Visakhapatnam,Australia
+1490426,2025-10-13,Bangladesh,South Africa,"Dr. Y.S. Rajasekhara Reddy ACA-VDCA Cricket Stadium, Visakhapatnam",Visakhapatnam,South Africa
+1490427,2025-10-14,Sri Lanka,New Zealand,"R Premadasa Stadium, Colombo",Colombo,
+1490428,2025-10-15,England,Pakistan,"R Premadasa Stadium, Colombo",Colombo,
+1490429,2025-10-16,Bangladesh,Australia,"Dr. Y.S. Rajasekhara Reddy ACA-VDCA Cricket Stadium, Visakhapatnam",Visakhapatnam,Australia
+1490430,2025-10-17,Sri Lanka,South Africa,"R Premadasa Stadium, Colombo",Colombo,South Africa
+1490431,2025-10-18,Pakistan,New Zealand,"R Premadasa Stadium, Colombo",Colombo,
+1490432,2025-10-19,England,India,"Holkar Cricket Stadium, Indore",Indore,England
+1490433,2025-10-20,Sri Lanka,Bangladesh,"Dr DY Patil Sports Academy, Navi Mumbai",Navi Mumbai,Sri Lanka
+1490434,2025-10-21,South Africa,Pakistan,"R Premadasa Stadium, Colombo",Colombo,South Africa
+1490435,2025-10-22,England,Australia,"Holkar Cricket Stadium, Indore",Indore,Australia
+1490436,2025-10-23,India,New Zealand,"Dr DY Patil Sports Academy, Navi Mumbai",Navi Mumbai,India
+1490437,2025-10-24,Pakistan,Sri Lanka,"R Premadasa Stadium, Colombo",Colombo,
+1490438,2025-10-25,South Africa,Australia,"Holkar Cricket Stadium, Indore",Indore,Australia
+1490439,2025-10-26,New Zealand,England,"Dr. Y.S. Rajasekhara Reddy ACA-VDCA Cricket Stadium, Visakhapatnam",Visakhapatnam,England
+1490440,2025-10-26,Bangladesh,India,"Dr DY Patil Sports Academy, Navi Mumbai",Navi Mumbai,
+1490441,2025-10-29,South Africa,England,"Barsapara Cricket Stadium, Guwahati",Guwahati,South Africa
+1490442,2025-10-30,Australia,India,"Dr DY Patil Sports Academy, Navi Mumbai",Navi Mumbai,India
+1490443,2025-11-02,India,South Africa,"Dr DY Patil Sports Academy, Navi Mumbai",Navi Mumbai,India
+357962,2009-03-10,England,India,North Sydney Oval,Sydney,England
+594891,2013-01-31,India,West Indies,Brabourne Stadium,Mumbai,India
+594894,2013-02-01,England,Sri Lanka,Brabourne Stadium,Mumbai,Sri Lanka
+594897,2013-02-03,India,England,Brabourne Stadium,Mumbai,England
+594901,2013-02-05,India,Sri Lanka,Brabourne Stadium,Mumbai,Sri Lanka
+594904,2013-02-08,Australia,England,Brabourne Stadium,Mumbai,Australia
+594907,2013-02-10,Australia,Sri Lanka,Brabourne Stadium,Mumbai,Australia
+594909,2013-02-11,New Zealand,West Indies,Brabourne Stadium,Mumbai,West Indies
+594912,2013-02-13,England,New Zealand,Brabourne Stadium,Mumbai,England
+594914,2013-02-15,England,New Zealand,Brabourne Stadium,Mumbai,England
+594915,2013-02-17,Australia,West Indies,Brabourne Stadium,Mumbai,Australia

@@ -1,0 +1,12 @@
+paths:
+  zip_path: "data/raw/icc_womens_cricket_world_cup_female_json.zip"
+  extract_path: "data/raw"
+  processed_path: "data/processed"
+
+output:
+  matches_file: "matches.csv"
+  deliveries_file: "deliveries.csv"
+
+logging:
+  log_file: "logs/etl.log"
+  level: "INFO"
