@@ -39,8 +39,19 @@ The pipeline ingests raw JSON match files, transforms deeply nested cricket data
     ├── analytics/
     │   └── analysis.py
     │
+    ├── web/
+    │   ├── app.py
+    │   ├── static/
+    │   │   ├── css/
+    │   │   │   └── styles.css
+    │   │   └── js/
+    │   │       └── script.js
+    │   └── templates/
+    │       └── index.html
+    │
     ├── logs/
-    │   └── etl.log
+    │   ├── etl.log
+    │   └── web.log
     │
     ├── Dockerfile
     ├── requirements.txt
@@ -123,6 +134,16 @@ Refer to `analytics/analysis.py` for details.
 ### 3. Run the Pipeline
 
     python src/main.py
+
+### 4. Run the Web UI
+
+After the pipeline completes successfully, you can view results through the web interface:
+
+    python web/app.py
+
+Then open your browser and navigate to:
+
+    http://127.0.0.1:5000/
 
 ***
 

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cricket Analytics</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <h1>Women's Cricket Analytics</h1>
+
+    <h2>Player Stats</h2>
+    <select id="playerSelect">
+        <option value="">Select Player</option>
+    </select>
+    <select id="opponentSelect">
+        <option value="">All Opponents</option>
+    </select>
+    <button onclick="getPlayerStats()">Get Stats</button>
+    <div id="playerStats"></div>
+
+    <h2>Team vs Team Runs</h2>
+    <select id="team1Select">
+        <option value="">Select Team 1</option>
+    </select>
+    <select id="team2Select">
+        <option value="">Select Team 2</option>
+    </select>
+    <button onclick="getTeamVsTeam()">Get Runs</button>
+    <div id="teamVsTeamResult"></div>
+
+    <script src="/static/js/script.js"></script>
+</body>
+</html>

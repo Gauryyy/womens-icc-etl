@@ -1,0 +1,7 @@
+2026-04-20 19:36:36,003 - INFO - ETL pipeline started
+2026-04-20 19:36:36,004 - INFO - Extracting data/raw/icc_womens_cricket_world_cup_female_json.zip...
+2026-04-20 19:36:36,086 - INFO - Extraction complete
+2026-04-20 19:36:36,088 - INFO - Processing 102 files
+2026-04-20 19:36:36,259 - INFO - Transformation complete
+2026-04-20 19:36:36,453 - INFO - Data saved successfully
+2026-04-20 19:36:36,456 - INFO - ETL pipeline finished
