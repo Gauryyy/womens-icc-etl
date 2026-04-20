@@ -92,7 +92,7 @@ The analytics notebook includes examples such as:
 *   Strike rate analysis
 *   Match-level performance summaries
 
-Refer to `analytics/analysis.ipynb` for details.
+Refer to `analytics/analysis.py` for details.
 
 ***
 
