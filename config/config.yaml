@@ -1,3 +1,7 @@
+# Cricsheet ETL Configuration
+version: "1.0"
+environment: "development"  # Options: development, production
+
 paths:
   zip_path: "data/raw/icc_womens_cricket_world_cup_female_json.zip"
   extract_path: "data/raw"
@@ -6,7 +10,20 @@ paths:
 output:
   matches_file: "matches.csv"
   deliveries_file: "deliveries.csv"
+  format: "csv"  
 
 logging:
   log_file: "logs/etl.log"
-  level: "INFO"
+  web_log_file: "logs/web.log"
+  level: "INFO"  # Options: DEBUG, INFO, WARNING, ERROR
+  retention_days: 30
+
+web:
+  host: "127.0.0.1"
+  port: 5000
+  debug: true
+
+# Error handling
+error_handling:
+  retry_attempts: 3
+  timeout_seconds: 300
