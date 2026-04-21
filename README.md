@@ -1,205 +1,223 @@
+# Women's ICC ETL and Analytics App
 
-# Cricsheet ETL Pipeline (Women’s World Cup)
+This repository contains a modular ETL pipeline built with Python and Pandas to process women's cricket match data from Cricsheet, plus a Flask web app for analytics exploration.
 
-This repository contains a modular ETL pipeline built using Python and Pandas to process ball-by-ball cricket data from Cricsheet.  
-The pipeline ingests raw JSON match files, transforms deeply nested cricket data into well-structured datasets, and enables downstream analytics on player and match performance.
+The web app now includes:
+- email/password registration and login
+- Google OAuth login
+- session-based protected dashboard access
+- SQLite user storage for authentication
 
 ***
 
 ## Features
 
-*   Extracts and processes Cricsheet JSON datasets provided in ZIP format
-*   Transforms nested cricket data structures (innings → overs → deliveries) into flat, analysis-ready tables
-*   Implements a modular ETL architecture with clear separation of Extract, Transform, and Load stages
-*   Uses configuration-driven execution through YAML files
-*   Provides logging support for pipeline observability and monitoring
-*   Dockerized to ensure reproducibility and environment consistency
-*   Enables basic analytics on player and match performance
+- Extracts and processes Cricsheet JSON datasets from ZIP archives
+- Transforms nested cricket data into flat, analysis-ready CSV files
+- Serves analytics through a Flask dashboard
+- Supports user registration and login with hashed passwords
+- Supports Google OAuth sign-in alongside local login
+- Uses SQLite for storing app users
+- Protects dashboard and API routes with session-based authentication
 
 ***
 
 ## Project Structure
 
-    cricsheet-etl/
-    │
-    ├── config/
-    │   └── config.yaml
-    │
-    ├── data/
-    │   ├── raw/
-    │   └── processed/
-    │
-    ├── src/
-    │   ├── extract.py
-    │   ├── transform.py
-    │   ├── load.py
-    │   ├── utils.py
-    │   └── main.py
-    │
-    ├── analytics/
-    │   └── analysis.py
-    │
-    ├── web/
-    │   ├── app.py
-    │   ├── static/
-    │   │   ├── css/
-    │   │   │   └── styles.css
-    │   │   └── js/
-    │   │       └── script.js
-    │   └── templates/
-    │       └── index.html
-    │
-    ├── logs/
-    │   ├── etl.log
-    │   └── web.log
-    │
-    ├── Dockerfile
-    ├── requirements.txt
-    └── README.md
+```text
+womens-icc-etl/
+|-- config/
+|   |-- config.yaml
+|   |-- google_oauth.example.json
+|-- data/
+|   |-- raw/
+|   |-- processed/
+|-- src/
+|   |-- extract.py
+|   |-- transform.py
+|   |-- load.py
+|   |-- utils.py
+|   |-- main.py
+|-- analytics/
+|   |-- analysis.py
+|-- web/
+|   |-- app.py
+|   |-- users.db
+|   |-- static/
+|   |   |-- css/
+|   |   |   |-- styles.css
+|   |   |-- js/
+|   |       |-- script.js
+|   |-- templates/
+|       |-- login.html
+|       |-- register.html
+|       |-- dashboard.html
+|-- logs/
+|   |-- etl.log
+|   |-- web.log
+|-- .gitignore
+|-- Dockerfile
+|-- requirements.txt
+|-- README.md
+```
+
+Note:
+- `config/google_oauth.json` is intentionally ignored by Git and should stay local only.
+- `web/users.db` is created automatically when the web app starts.
 
 ***
 
-## Pipeline Overview
+## ETL Overview
 
-    ZIP File
-       ↓
-    Extract (unzip)
-       ↓
-    Transform (flatten JSON)
-       ↓
-    Load (CSV output)
-       ↓
-    Analytics
+```text
+ZIP File
+   ->
+Extract
+   ->
+Transform
+   ->
+Load CSV files
+   ->
+Analytics Dashboard
+```
 
-***
-
-## Output Data
-
-### 1. Matches Dataset (`matches.csv`)
-
-Contains match-level metadata, including:
-
-*   Teams
-*   Venue
-*   Winner
-*   Match date
-
-### 2. Deliveries Dataset (`deliveries.csv`)
-
-Contains ball-by-ball information, including:
-
-*   Batter and bowler details
-*   Runs scored
-*   Innings, over, and ball numbers
+Generated output files:
+- `data/processed/matches.csv`
+- `data/processed/deliveries.csv`
 
 ***
 
-## Sample Analytics
+## Authentication
 
-The analytics notebook includes examples such as:
+The Flask app supports two login methods:
+- Local auth using name, email, and password
+- Google OAuth using a Google Cloud OAuth client
 
-*   Top run scorers across matches
-*   Best bowlers based on economy rate
-*   Strike rate analysis
-*   Match-level performance summaries
+Local auth details:
+- user data is stored in `web/users.db`
+- passwords are hashed with `werkzeug.security.generate_password_hash`
+- login validation uses `check_password_hash`
+- duplicate email registration is blocked
 
-Refer to `analytics/analysis.py` for details.
+Protected route:
+- `/dashboard`
 
-***
-
-## Docker Setup
-
-### Build the Docker Image
-
-    docker build -t womens-icc-etl .
-
-### Run the Pipeline
-
-    docker run -p 5000:5000 womens-icc-etl
+Auth routes:
+- `/register`
+- `/login`
+- `/login/google`
+- `/auth/callback`
+- `/logout`
 
 ***
 
 ## Local Setup
 
-### 1. Create a Virtual Environment
+### 1. Create a virtual environment
 
-    python -m venv venv
-    source venv/bin/activate   # macOS/Linux
-    venv\Scripts\activate      # Windows
+```powershell
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+```
 
-### 2. Install Dependencies
+### 2. Install dependencies
 
-    pip install -r requirements.txt
+```powershell
+pip install -r requirements.txt
+```
 
-### 3. Run the Pipeline
+### 3. Run the ETL pipeline
 
-    python src/main.py
+```powershell
+python .\src\main.py
+```
 
-### 4. Run the Web UI
+### 4. Configure Google OAuth
 
-After the pipeline completes successfully, you can view results through the web interface:
+Copy the example file and add your real credentials:
 
-    python web/app.py
+```powershell
+Copy-Item .\config\google_oauth.example.json .\config\google_oauth.json
+```
 
-Then open your browser and navigate to:
+Then update `config/google_oauth.json` with your real Google OAuth client values.
 
-    http://127.0.0.1:5000/
+Required redirect URI in Google Cloud Console:
+
+```text
+http://localhost:5000/auth/callback
+```
+
+Important:
+- create a `Web application` OAuth client in Google Cloud Console
+- if your app is in `Testing`, add your Google account under `Test users`
+- do not commit `config/google_oauth.json`
+
+### 5. Run the Flask web app
+
+```powershell
+python .\web\app.py
+```
+
+Then open:
+
+[http://127.0.0.1:5000](http://127.0.0.1:5000)
 
 ***
 
 ## Configuration
 
-All pipeline parameters are defined in the following file:
+Pipeline configuration lives in:
 
-    config/config.yaml
+`config/config.yaml`
 
-Example configuration:
+Example:
 
 ```yaml
 paths:
-  zip_path: "data/icc_womens_cricket_world_cup_json.zip"
+  zip_path: "data/raw/icc_womens_cricket_world_cup_female_json.zip"
   extract_path: "data/raw"
   processed_path: "data/processed"
+
+web:
+  host: "127.0.0.1"
+  port: 5000
+  debug: true
 ```
 
 ***
 
-## Logging
+## Security Notes
 
-Logs are written to:
-
-    logs/etl.log
-
-The log file captures:
-
-*   Data extraction status
-*   Number of files processed
-*   Overall pipeline completion status
+- Keep real Google OAuth credentials only in `config/google_oauth.json`
+- `config/google_oauth.json` is ignored by Git
+- Commit `config/google_oauth.example.json` instead
+- Rotate OAuth client secrets immediately if they are ever exposed
 
 ***
 
-## Key Learnings
+## Logs
 
-*   Handling and transforming large volumes of nested JSON data
-*   Designing modular and maintainable ETL pipelines
-*   Applying configuration-driven architecture for flexibility
-*   Containerizing data pipelines using Docker
-*   Performing analytical transformations and summaries using Pandas
+App logs are written to:
+- `logs/etl.log`
+- `logs/web.log`
+
+These are local runtime files and should not be committed.
 
 ***
 
-## Future Improvements
+## Tech Stack
 
-*   Add database support using PostgreSQL or SQLite
-*   Implement data validation and quality checks
-*   Introduce unit tests using pytest
-*   Support incremental and historical data loads
-*   Scale transformations using PySpark for larger datasets
+- Python
+- Pandas
+- Flask
+- SQLite
+- Authlib
+- Jinja2
+- Bootstrap
 
 ***
 
 ## Data Source
 
-Cricsheet: <https://cricsheet.org/>
-
-***
+Cricsheet: [https://cricsheet.org/](https://cricsheet.org/)
