@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Cricket Analytics</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --bg-start: #0f172a;
+            --bg-end: #2563eb;
+            --card-bg: rgba(255, 255, 255, 0.12);
+            --card-border: rgba(255, 255, 255, 0.22);
+            --text-soft: rgba(255, 255, 255, 0.78);
+            --accent: #22c55e;
+            --accent-dark: #16a34a;
+        }
+
+        body {
+            min-height: 100vh;
+            margin: 0;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            background:
+                radial-gradient(circle at top right, rgba(34, 197, 94, 0.24), transparent 30%),
+                radial-gradient(circle at bottom left, rgba(251, 146, 60, 0.2), transparent 30%),
+                linear-gradient(135deg, var(--bg-start), var(--bg-end));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+        }
+
+        .auth-shell {
+            width: 100%;
+            max-width: 460px;
+        }
+
+        .auth-card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            backdrop-filter: blur(18px);
+            border-radius: 24px;
+            box-shadow: 0 24px 60px rgba(15, 23, 42, 0.35);
+            padding: 32px;
+        }
+
+        .brand-badge {
+            width: 68px;
+            height: 68px;
+            border-radius: 20px;
+            background: linear-gradient(135deg, #22c55e, #06b6d4);
+            display: grid;
+            place-items: center;
+            color: white;
+            font-size: 28px;
+            margin: 0 auto 18px;
+        }
+
+        .heading {
+            color: white;
+            text-align: center;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+
+        .subheading {
+            color: var(--text-soft);
+            text-align: center;
+            margin-bottom: 28px;
+        }
+
+        .form-label {
+            color: white;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .form-control {
+            border-radius: 14px;
+            padding: 14px 16px;
+            background: rgba(255, 255, 255, 0.12);
+            border: 1px solid rgba(255, 255, 255, 0.16);
+            color: white;
+        }
+
+        .form-control::placeholder {
+            color: rgba(255, 255, 255, 0.52);
+        }
+
+        .form-control:focus {
+            color: white;
+            background: rgba(255, 255, 255, 0.16);
+            border-color: rgba(255, 255, 255, 0.45);
+            box-shadow: 0 0 0 0.25rem rgba(34, 197, 94, 0.18);
+        }
+
+        .btn-auth {
+            width: 100%;
+            border: none;
+            border-radius: 14px;
+            padding: 14px 18px;
+            font-weight: 700;
+        }
+
+        .btn-login {
+            background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+            color: white;
+            box-shadow: 0 16px 30px rgba(34, 197, 94, 0.28);
+        }
+
+        .btn-google {
+            background: rgba(255, 255, 255, 0.92);
+            color: #111827;
+            border: 1px solid rgba(255, 255, 255, 0.4);
+        }
+
+        .divider {
+            color: var(--text-soft);
+            text-align: center;
+            margin: 22px 0;
+            position: relative;
+        }
+
+        .divider::before {
+            content: "";
+            position: absolute;
+            inset: 50% 0 auto;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .divider span {
+            position: relative;
+            padding: 0 14px;
+            background: transparent;
+        }
+
+        .bottom-copy {
+            color: var(--text-soft);
+            text-align: center;
+            margin-top: 22px;
+        }
+
+        .bottom-copy a {
+            color: white;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="auth-shell">
+        <div class="auth-card">
+            <div class="brand-badge">
+                <i class="fa-solid fa-chart-line"></i>
+            </div>
+            <h1 class="heading">Welcome back</h1>
+            <p class="subheading">Log in to your analytics workspace with email/password or Google.</p>
+
+            {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                    {% for category, message in messages %}
+                        <div class="alert alert-{{ category }} mb-3" role="alert">{{ message }}</div>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+
+            <form method="post" action="{{ url_for('login') }}">
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="you@example.com" required>
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="password" name="password" placeholder="Enter your password" required>
+                </div>
+                <button type="submit" class="btn btn-auth btn-login">Login</button>
+            </form>
+
+            <div class="divider"><span>OR</span></div>
+
+            <a href="{{ url_for('login_google') }}" class="btn btn-auth btn-google">
+                <i class="fa-brands fa-google me-2"></i> Login with Google
+            </a>
+
+            <p class="bottom-copy">Need an account? <a href="{{ url_for('register') }}">Register here</a></p>
+        </div>
+    </div>
+</body>
+</html>
