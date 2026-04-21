@@ -24,3 +24,22 @@
 2026-04-20 20:04:43,297 - 127.0.0.1 - - [20/Apr/2026 20:04:43] "GET /api/player_stats/MDN%20Hansika HTTP/1.1" 200 -
 2026-04-20 20:04:52,178 - Team vs team stats requested: Sri Lanka vs Pakistan
 2026-04-20 20:04:52,217 - 127.0.0.1 - - [20/Apr/2026 20:04:52] "GET /api/team_vs_team/Sri%20Lanka/Pakistan HTTP/1.1" 200 -
+2026-04-21 01:54:37,012 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-04-21 01:54:37,012 - [33mPress CTRL+C to quit[0m
+2026-04-21 01:54:37,014 -  * Restarting with stat
+2026-04-21 01:54:38,506 -  * Debugger is active!
+2026-04-21 01:54:38,509 -  * Debugger PIN: 729-585-090
+2026-04-21 01:56:45,574 - Home page accessed
+2026-04-21 01:56:45,584 - 127.0.0.1 - - [21/Apr/2026 01:56:45] "GET / HTTP/1.1" 200 -
+2026-04-21 01:56:45,874 - 127.0.0.1 - - [21/Apr/2026 01:56:45] "GET /static/css/styles.css HTTP/1.1" 200 -
+2026-04-21 01:56:45,880 - 127.0.0.1 - - [21/Apr/2026 01:56:45] "GET /static/js/script.js HTTP/1.1" 200 -
+2026-04-21 01:56:45,900 - Players list requested
+2026-04-21 01:56:45,905 - Teams list requested
+2026-04-21 01:56:45,910 - 127.0.0.1 - - [21/Apr/2026 01:56:45] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-04-21 01:56:45,913 - 127.0.0.1 - - [21/Apr/2026 01:56:45] "GET /api/teams HTTP/1.1" 200 -
+2026-04-21 01:56:45,914 - 127.0.0.1 - - [21/Apr/2026 01:56:45] "GET /api/players HTTP/1.1" 200 -
+2026-04-21 01:56:55,848 - Player stats requested: LE Kaushalya vs England
+2026-04-21 01:56:55,879 - 127.0.0.1 - - [21/Apr/2026 01:56:55] "GET /api/player_stats/LE%20Kaushalya/England HTTP/1.1" 200 -
+2026-04-21 01:57:02,847 - Team vs team stats requested: West Indies vs India
+2026-04-21 01:57:02,899 - 127.0.0.1 - - [21/Apr/2026 01:57:02] "GET /api/team_vs_team/West%20Indies/India HTTP/1.1" 200 -
