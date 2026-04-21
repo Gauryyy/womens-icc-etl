@@ -5,6 +5,16 @@ import logging
 
 app = Flask(__name__)
 
+from src.main import run_pipeline
+
+@app.route("/run_pipeline/<int:user_id>")
+def run_pipeline_route(user_id):
+    try:
+        run_pipeline(user_id)
+        return "Pipeline executed successfully"
+    except Exception as e:
+        return str(e)
+
 # Setup logging
 log_file = os.path.join(os.path.dirname(__file__), '..', 'logs', 'web.log')
 logging.basicConfig(filename=log_file, level=logging.INFO, format='%(asctime)s - %(message)s')

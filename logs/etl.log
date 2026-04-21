@@ -12,3 +12,54 @@
 2026-04-21 01:52:35,495 - INFO - Transformation complete
 2026-04-21 01:52:35,696 - INFO - Data saved successfully
 2026-04-21 01:52:35,699 - INFO - ETL pipeline finished
+2026-04-21 22:39:46,751 - INFO - ETL pipeline started
+2026-04-21 22:39:46,751 - INFO - Extracting data/raw/icc_womens_cricket_world_cup_female_json.zip...
+2026-04-21 22:39:46,839 - INFO - Extraction complete
+2026-04-21 22:39:46,840 - INFO - Processing 102 files
+2026-04-21 22:39:47,038 - INFO - Transformation complete
+2026-04-21 22:39:47,202 - INFO - Data saved successfully
+2026-04-21 22:39:47,204 - INFO - ETL pipeline finished
+2026-04-21 22:41:56,148 - INFO - ETL pipeline started
+2026-04-21 22:41:56,148 - INFO - Extracting data/raw/icc_womens_cricket_world_cup_female_json.zip...
+2026-04-21 22:41:56,228 - INFO - Extraction complete
+2026-04-21 22:41:56,229 - INFO - Processing 102 files
+2026-04-21 22:41:56,360 - INFO - Transformation complete
+2026-04-21 22:41:56,532 - INFO - Data saved successfully
+2026-04-21 22:41:56,534 - INFO - ETL pipeline finished
+2026-04-21 22:43:25,682 - INFO - ETL pipeline started
+2026-04-21 22:43:25,682 - INFO - Extracting data/raw/icc_womens_cricket_world_cup_female_json.zip...
+2026-04-21 22:43:25,744 - INFO - Extraction complete
+2026-04-21 22:43:25,745 - INFO - Processing 102 files
+2026-04-21 22:43:25,864 - INFO - Transformation complete
+2026-04-21 22:43:26,004 - INFO - Data saved successfully
+2026-04-21 22:43:26,006 - INFO - ETL pipeline finished
+2026-04-21 22:43:26,013 - INFO - ETL pipeline started
+2026-04-21 22:46:24,900 - INFO - ETL pipeline started
+2026-04-21 22:46:24,901 - INFO - Extracting data/raw/icc_womens_cricket_world_cup_female_json.zip...
+2026-04-21 22:46:24,984 - INFO - Extraction complete
+2026-04-21 22:46:24,985 - INFO - Processing 102 files
+2026-04-21 22:46:25,121 - INFO - Transformation complete
+2026-04-21 22:46:25,266 - INFO - Data saved successfully
+2026-04-21 22:46:25,269 - INFO - ETL pipeline finished
+2026-04-21 22:46:25,279 - INFO - ETL pipeline started
+2026-04-21 23:00:32,940 - INFO - ETL pipeline started
+2026-04-21 23:00:33,440 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.10:5000
+2026-04-21 23:00:33,440 - INFO - [33mPress CTRL+C to quit[0m
+2026-04-21 23:00:33,442 - INFO -  * Restarting with stat
+2026-04-21 23:00:34,258 - INFO - ETL pipeline started
+2026-04-21 23:00:34,607 - WARNING -  * Debugger is active!
+2026-04-21 23:00:34,609 - INFO -  * Debugger PIN: 117-926-866
+2026-04-21 23:02:38,633 - INFO -  * Detected change in 'C:\\Users\\Relanto\\OneDrive - Relanto\\Documents\\etl_project_2\\womens-icc-etl\\src\\main.py', reloading
+2026-04-21 23:02:38,790 - INFO -  * Restarting with stat
+2026-04-21 23:03:05,043 - INFO - User 1 triggered ETL pipeline
+2026-04-21 23:03:05,045 - INFO - Extracting data/raw/icc_womens_cricket_world_cup_female_json.zip...
+2026-04-21 23:03:05,382 - INFO - Extraction complete
+2026-04-21 23:03:05,386 - INFO - Processing 102 files
+2026-04-21 23:03:05,808 - INFO - Transformation complete
+2026-04-21 23:03:06,296 - INFO - Data saved successfully
+2026-04-21 23:03:06,300 - INFO - ETL pipeline finished
+2026-04-21 23:03:06,315 - INFO - 127.0.0.1 - - [21/Apr/2026 23:03:06] "GET /run_pipeline/1 HTTP/1.1" 200 -
+2026-04-21 23:03:15,367 - INFO - 127.0.0.1 - - [21/Apr/2026 23:03:15] "GET /run_pipeline/2 HTTP/1.1" 200 -

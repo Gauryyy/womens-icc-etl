@@ -43,3 +43,24 @@
 2026-04-21 01:56:55,879 - 127.0.0.1 - - [21/Apr/2026 01:56:55] "GET /api/player_stats/LE%20Kaushalya/England HTTP/1.1" 200 -
 2026-04-21 01:57:02,847 - Team vs team stats requested: West Indies vs India
 2026-04-21 01:57:02,899 - 127.0.0.1 - - [21/Apr/2026 01:57:02] "GET /api/team_vs_team/West%20Indies/India HTTP/1.1" 200 -
+2026-04-21 22:54:08,079 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.10:5000
+2026-04-21 22:54:08,080 - [33mPress CTRL+C to quit[0m
+2026-04-21 22:54:08,081 -  * Restarting with stat
+2026-04-21 22:54:09,333 -  * Debugger is active!
+2026-04-21 22:54:09,334 -  * Debugger PIN: 117-926-866
+2026-04-21 22:55:08,552 - Home page accessed
+2026-04-21 22:55:08,559 - 127.0.0.1 - - [21/Apr/2026 22:55:08] "GET / HTTP/1.1" 200 -
+2026-04-21 22:55:08,811 - 127.0.0.1 - - [21/Apr/2026 22:55:08] "GET /static/css/styles.css HTTP/1.1" 200 -
+2026-04-21 22:55:08,821 - 127.0.0.1 - - [21/Apr/2026 22:55:08] "GET /static/js/script.js HTTP/1.1" 200 -
+2026-04-21 22:55:08,841 - Players list requested
+2026-04-21 22:55:08,844 - Teams list requested
+2026-04-21 22:55:08,848 - 127.0.0.1 - - [21/Apr/2026 22:55:08] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-04-21 22:55:08,854 - 127.0.0.1 - - [21/Apr/2026 22:55:08] "GET /api/teams HTTP/1.1" 200 -
+2026-04-21 22:55:08,854 - 127.0.0.1 - - [21/Apr/2026 22:55:08] "GET /api/players HTTP/1.1" 200 -
+2026-04-21 22:58:42,457 -  * Detected change in 'C:\\Users\\Relanto\\OneDrive - Relanto\\Documents\\etl_project_2\\womens-icc-etl\\web\\app.py', reloading
+2026-04-21 22:58:42,583 -  * Restarting with stat
+2026-04-21 23:02:40,386 -  * Debugger is active!
+2026-04-21 23:02:40,388 -  * Debugger PIN: 117-926-866
