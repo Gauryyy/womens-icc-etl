@@ -1,20 +1,35 @@
+# ======================
 # Python cache
+# ======================
 __pycache__/
 *.pyc
 
+# ======================
 # Logs
+# ======================
 logs/
 *.log
 
+# ======================
 # Virtual environments
+# ======================
 venv/
 .env/
 
-# OS / editor
+# ======================
+# OS / Editor files
+# ======================
 .DS_Store
 Thumbs.db
 .vscode/
 .idea/
 
+# ======================
+# Application data
+# ======================
+web/users.db
+
+# ======================
 # Secrets & credentials
+# ======================
 config/google_oauth.json
